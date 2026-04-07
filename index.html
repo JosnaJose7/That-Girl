@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are That Girl ✨</title>
+    <meta name="description" content="A visually stunning, empowering website designed to hype up and motivate Gen Z girls.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="light-mode">
+    <div id="particles-container"></div>
+    
+    <nav class="glass-nav">
+        <div class="logo">That Girl ✨</div>
+        <button id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="glow-text">You Are That Girl 💅✨</h1>
+            <p class="subtitle">Your energy is unmatched. Step into your power.</p>
+            <button id="scroll-down" class="btn-primary">Claim Your Power</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Daily Affirmation Section -->
+        <section class="glass-panel main-section" id="affirmations">
+            <h2>Daily Affirmations</h2>
+            <div class="display-box pulse-on-change" id="affirmation-display">
+                Click the button below to reveal your truth for the day.
+            </div>
+            <div class="actions">
+                <button class="btn-glow" id="btn-affirmation">Give Me My Power ✨</button>
+                <button class="btn-icon" id="btn-save-affirmation" title="Save this affirmation">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="saved-section">
+                <h3><i class="fas fa-bookmark heart-icon"></i> Saved Affirmations</h3>
+                <ul class="saved-list" id="saved-affirmations">
+                    <!-- Saved items will appear here -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Main Content Layout Grid -->
+        <div class="grid-container">
+            <!-- Glow-Up Tracker Section -->
+            <section class="glass-panel" id="glow-up">
+                <h2>Glow-Up Tracker 🪴</h2>
+                <p class="section-desc">Small daily steps to become your best self.</p>
+                
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="glow-progress"></div>
+                    </div>
+                    <span id="progress-text" class="progress-text">0%</span>
+                </div>
+
+                <div class="checklist" id="glow-checklist">
+                    <label class="check-item">
+                        <input type="checkbox" id="check-water" data-key="water"> 
+                        <span class="custom-check"></span>
+                        💧 Hydrate (2L water)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" id="check-movement" data-key="movement"> 
+                        <span class="custom-check"></span>
+                        🏃‍♀️ Move your body
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" id="check-skincare" data-key="skincare"> 
+                        <span class="custom-check"></span>
+                        🧴 Skincare routine
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" id="check-mindful" data-key="mindful"> 
+                        <span class="custom-check"></span>
+                        🧘‍♀️ 10 mins mindfulness
+                    </label>
+                </div>
+                <div class="streak-box">
+                    Current Streak: <span id="streak-count" class="badge">0</span> Days 🔥
+                </div>
+            </section>
+
+            <div class="column-layout">
+                <!-- Compliment Generator Section -->
+                <section class="glass-panel" id="compliments">
+                    <h2>Hype Me Up! 💖</h2>
+                    <div class="display-box compliment-text pulse-on-change" id="compliment-display">
+                        Need a quick confidence boost?
+                    </div>
+                    <button class="btn-glow btn-secondary" id="btn-compliment">Hype Me ✨</button>
+                </section>
+
+                <!-- Music Vibes Section -->
+                <section class="glass-panel" id="music">
+                    <h2>Music Vibes 🎧</h2>
+                    <p class="section-desc">Set the tone for your main character moment.</p>
+                    <div class="spotify-embed">
+                        <!-- Aesthetic Pop/Lofi mix -->
+                        <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="actions" style="margin-top: 20px;">
+                        <button class="btn-glow btn-secondary" id="btn-daily-song" style="font-size: 1rem; padding: 10px 25px;">Discover Daily Song ✨</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with 💖 for everything that you are.</p>
+    </footer>
+
+    <!-- Audio Effects (Safe Mixkit URLs) -->
+    <!-- Sound effect for Affirmations -->
+    <audio id="sparkle-sound" src="https://assets.mixkit.co/active_storage/sfx/2621/2621-preview.mp3"></audio>
+    <!-- Sound effect for UI clicks like Tracker, Compliments -->
+    <audio id="pop-sound" src="https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
